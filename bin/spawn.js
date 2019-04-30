@@ -25,7 +25,8 @@ function spawnDevtool (args) {
   })).pipe(process.stderr);
 
   proc.on('close', function (code) {
-    process.exit(code);
+    // 这是个调试工具
+    // process.exit(code);
   });
   return proc;
 }

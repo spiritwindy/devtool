@@ -82,7 +82,7 @@ app.on('ready', function () {
   var mainIndexURL = 'file://' + __dirname + '/index.html';
 
   // Replace index.html with custom one
-  electron.protocol.interceptBufferProtocol('file', function (request, callback) {
+/*   electron.protocol.interceptBufferProtocol('file', function (request, callback) {
     // We can't just spin up a local server for this, see here:
     // https://github.com/atom/electron/issues/2414
 
@@ -106,7 +106,7 @@ app.on('ready', function () {
   }, function (err) {
     if (err) fatal(err);
   });
-
+ */
   // Setup the BrowserWindow
   mainWindow = createMainWindow(entryFile, mainIndexURL, argv, function () {
     // When we first launch, ensure the quit flag is set to the user args
